@@ -1,10 +1,10 @@
-#Solve it again by using C language
+def fact(number):
+    if number == 1:
+        return 1
+    return number*fact(number-1)
+
 
 a = int(input())
 for i in range(a):
-    total = 0
-    b = int(input())
-    number = str(2**b)
-    for k in number:
-        total += int(k)
-    print total
+    n, m = list(map(int, raw_input().split()))
+    print(fact(n+m)//(fact(n)*fact(m)) % (10**9+7))
